@@ -1,6 +1,114 @@
 $siteColor: #f16d7f
 $siteWidth: 1140px
 
+@-webkit-keyframes blur-out-expand-fwd 
+  0%
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    -webkit-filter: blur(0.01)
+    filter: blur(0.01)
+
+  100%
+    letter-spacing: 1em
+    -webkit-transform: translateZ(300px)
+    transform: translateZ(300px)
+    -webkit-filter: blur(12px) opacity(0%)
+    filter: blur(12px) opacity(0%)
+
+
+@keyframes blur-out-expand-fwd 
+  0%
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    -webkit-filter: blur(0.01)
+    filter: blur(0.01)
+
+  100%
+    letter-spacing: 1em
+    -webkit-transform: translateZ(300px)
+    transform: translateZ(300px)
+    -webkit-filter: blur(12px) opacity(0%)
+    filter: blur(12px) opacity(0%)
+
+
+@-webkit-keyframes text-focus-in 
+  0%
+    -webkit-filter: blur(30px)
+    filter: blur(30px)
+    opacity: 0
+
+  100%
+    -webkit-filter: blur(0px)
+    filter: blur(0px)
+    opacity: 1
+
+
+@keyframes text-focus-in 
+  0%
+    -webkit-filter: blur(30px)
+    filter: blur(30px)
+    opacity: 0
+
+  100%
+    -webkit-filter: blur(0px)
+    filter: blur(0px)
+    opacity: 1
+
+@-webkit-keyframes vibrate-1 
+  0%
+    -webkit-transform: translate(0)
+    transform: translate(0)
+
+  20%
+    -webkit-transform: translate(-2px, 2px)
+    transform: translate(-2px, 2px)
+
+  40%
+    -webkit-transform: translate(-2px, -2px)
+    transform: translate(-2px, -2px)
+
+  60%
+    -webkit-transform: translate(2px, 2px)
+    transform: translate(2px, 2px)
+
+  80%
+    -webkit-transform: translate(2px, -2px)
+    transform: translate(2px, -2px)
+
+  100%
+    -webkit-transform: translate(0)
+    transform: translate(0)
+
+
+@keyframes vibrate-1 
+  0%
+    -webkit-transform: translate(0)
+    transform: translate(0)
+
+  20%
+    -webkit-transform: translate(-2px, 2px)
+    transform: translate(-2px, 2px)
+
+  40%
+    -webkit-transform: translate(-2px, -2px)
+    transform: translate(-2px, -2px)
+
+  60%
+    -webkit-transform: translate(2px, 2px)
+    transform: translate(2px, 2px)
+
+  80%
+    -webkit-transform: translate(2px, -2px)
+    transform: translate(2px, -2px)
+
+  100%
+    -webkit-transform: translate(0)
+    transform: translate(0)
+
+
+
+
+
 
 /*   GLOBAL   */
 
@@ -201,6 +309,11 @@ a
     height: 90px
     padding-left: 15px
     border-left: 10px solid $siteColor
+    -webkit-animation: text-focus-in 1.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    animation: text-focus-in 1.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+    &:hover
+      -webkit-animation: blur-out-expand-fwd 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+      animation: blur-out-expand-fwd 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
 
 
   &__h1
@@ -217,6 +330,7 @@ a
 
   &__h3 span
     color: $siteColor
+
 
 
 /*     PROMO BLOCK TWO    */
@@ -286,16 +400,22 @@ a
   flex-wrap: wrap
   justify-content: space-between
 
-
+  &__description
+    padding-left: 20px
 
   &__item
     width: 263px
     margin-bottom: 60px
     position: relative
+    transition: all 0.4s
+    border-radius: 5px
 
 
   &__item:hover
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16)
+    transform: scale(1.05)
+    -webkit-animation: vibrate-1 0.5s linear infinite both
+    animation: vibrate-1 0.5s linear infinite both
 
   &__item:hover .product__image
     filter: brightness(50%)
@@ -305,6 +425,7 @@ a
 
   &__image
     width: 100%
+    transition: all 1s
 
 
   &__name
@@ -350,10 +471,15 @@ a
     height: 50px
     width: 212px
     align-items: center
+    transition: all 1s
+    &:hover
+      transform: scale(1.1)
 
 
 i.fas.fa-long-arrow-alt-right
   padding-left: 10px
+  color: #ffffff
+  font-size: 15px
 
 
 /*    OFFER BLOCK    */
@@ -530,6 +656,9 @@ i.fas.fa-long-arrow-alt-right
     height: inherit
     border-bottom-right-radius: 23px
     border-top-right-radius: 23px
+    transition: all 1s
+    &:hover
+      transform: scale(1.05)
 
 
 /*   FOOTER THE FOOTER   */
@@ -602,10 +731,12 @@ i.fas.fa-long-arrow-alt-right
   background-color: #fff
   color: rgba(178, 178, 178, 1)
   margin-right: 7px
+  transition: all 0.4s
 
 .same__icon:hover
   background-color: $siteColor
   color: #fff
+  transform: scale(1.2)
 
 
 /*   ARRIVALS BLOCK   */
@@ -616,7 +747,8 @@ i.fas.fa-long-arrow-alt-right
   align-items: center
   height: 150px
   border-bottom: 1px solid rgba(236, 236, 236, 1)
-  margin-bottom: 10px
+  background-color: #f8f3f4
+  margin-bottom: 90px
 
   &__h2
     font-size: 24px
@@ -821,7 +953,7 @@ i.fas.fa-long-arrow-alt-right
   &__product
     width: 35%
     text-align: left
-    padding-left: 100px
+    padding-left: 120px
 
     &__img
       position: absolute
@@ -871,13 +1003,24 @@ i.fas.fa-long-arrow-alt-right
     background-color: #ffffff
     border: 1px solid #eaeaea
 
+  &__input
+    width: 65px
+    margin-left: 42px
+    height: 36px
+    text-align: center
+    background-color: #ffffff
+    border: 1px solid #eaeaea
+    padding: -49px
+    margin-right: 42px
+
+
 
 
 /*  FORMALIZATION BLOCK  */
 
 .formalization
   display: flex
-  justify-content: center
+  justify-content: space-between
   margin-bottom: 80px
 
   &__item
@@ -886,11 +1029,12 @@ i.fas.fa-long-arrow-alt-right
 
 
   &__item
-    margin-right: 35px
     &:last-child
-      width: 240px
+      width: 271px
+      height: 200px
       text-align: right
-      margin-right: 0
+      padding: 0 35px
+      background-color: #f5f3f3
 
 
   &__title
@@ -955,12 +1099,163 @@ i.fas.fa-long-arrow-alt-right
     height: 45px
     width: 345px
     margin: 10px 0
-    padding-left: 10px
+    padding: 0 10px
     background-color: #ffffff
     border: 1px solid #eaeaea
     font-size: 13px
     font-weight: 300
     color: #b1b1b1
 
-.two
-   margin-right: 80px
+.fas
+  font-size: 12px
+  color: #b3b2b2
+  line-height: 20px
+
+
+/*  CHECKOUT SECTION   */
+
+
+.checkout
+  margin-top: 30px
+
+
+
+  & h3
+    font-size: 16px
+    font-weight: 900
+    color: #222222
+    text-transform: uppercase
+    margin-bottom: 30px
+
+  &__border
+    border-bottom: 1px solid #e8e8e8
+
+  &__titles
+    display: flex
+    justify-content: flex-start
+
+  &__left
+    margin-left: 35px
+
+  &__title
+    font-size: 15px
+    color: #222222
+    font-weight: 700
+    text-transform: uppercase
+
+  &__subtitle
+    font-size: 14px
+    color: #b3b2b2
+    line-height: 20px
+    margin-bottom: 25px
+    &_required
+      font-size: 13px
+      color: #ff0d0d
+      line-height: 20px
+
+  &__right
+    margin-left: 250px
+
+  &__form
+    margin-bottom: 15px
+
+  &__label
+    font-size: 14px
+    color: #222222
+    text-transform: uppercase
+    font-weight: 700
+    margin-left: 10px
+    & span
+      color: #ff0d0d
+      font-size: 17px
+    &_input
+      margin-left: 0
+      font-size: 13px
+
+  &__button
+    padding: 10px 15px
+    margin-top: 30px
+    margin-bottom: 70px
+    display: flex
+    justify-content: center
+    width: 140px
+    background-color: #ffffff
+    border: 1px solid #eaeaea
+    font-size: 14px
+    font-weight: bold
+    color: #4a4a4a
+    text-transform: uppercase
+
+  &__link
+    padding: 10px 5px
+    margin-top: 30px
+    margin-bottom: 70px
+    display: flex
+    justify-content: center
+    width: 200px
+    font-size: 14px
+    color: #222222
+    line-height: 20px
+
+  &__text
+    font-size: 13px
+    color: #b3b2b2
+    line-height: 20px
+    margin-left: 3px
+
+    & .fas
+      margin-right: 3px
+
+  &__input
+    height: 45px
+    width: 390px
+    background-color: #ffffff
+    border: 1px solid #eaeaea
+    padding-left: 20px
+    margin-bottom: 9px
+
+  &__links
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+.radio 
+  position: absolute
+  z-index: -1
+  opacity: 0
+  margin: 10px 0 0 7px
+
+  & + label
+    position: relative
+    padding: 0 0 0 25px
+    cursor: pointer
+
+  & + label:before
+    content: ""
+    position: absolute
+    top: 2px
+    left: -11px
+    width: 10px
+    height: 10px
+    border: 2px solid #000
+    border-radius: 50%
+    background: #fff
+
+  & + label:after
+    content: ""
+    position: absolute
+    top: 6px
+    left: -7px
+    width: 6px
+    height: 6px
+    border-radius: 50%
+    background: #000
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.5)
+    opacity: 0
+    transition: .2s
+
+  &:checked + label:after
+    opacity: 1
+
+  &:focus + label:before
+    box-shadow: 0 0 0 1px rgba(0,0,0,.5)
