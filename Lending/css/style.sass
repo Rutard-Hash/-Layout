@@ -230,7 +230,6 @@ a
 
   &__flex
     width: 234px
-    margin-right: 46px
 
   &__flex:last-of-type
     margin-right: 0
@@ -748,7 +747,6 @@ i.fas.fa-long-arrow-alt-right
   height: 150px
   border-bottom: 1px solid rgba(236, 236, 236, 1)
   background-color: #f8f3f4
-  margin-bottom: 90px
 
   &__h2
     font-size: 24px
@@ -768,7 +766,8 @@ i.fas.fa-long-arrow-alt-right
     line-height: 20px
     text-transform: uppercase
     padding-right: 10px
-
+    & span
+      padding: 0 3px
   &__h4:last-child
     padding-right: 0
 
@@ -783,6 +782,7 @@ i.fas.fa-long-arrow-alt-right
 .single__page__product__img
   display: flex
   justify-content: center
+  margin-top: 20px
 
 
 /* CLOTHES */
@@ -924,6 +924,7 @@ i.fas.fa-long-arrow-alt-right
 /*    SHOPPING CART    */
 
 .shopping
+  margin-top: 80px
   &__product__title
     font-size: 13px
     font-weight: 900
@@ -940,6 +941,7 @@ i.fas.fa-long-arrow-alt-right
     display: flex
     justify-content: space-around
     align-items: center
+    margin-bottom: 20px
 
 
   &__item
@@ -947,11 +949,13 @@ i.fas.fa-long-arrow-alt-right
     justify-content: space-between
     align-items: center
     position: relative
-    margin-top: 40px
-    margin-bottom: 60px
+    padding: 30px 0
+    border-top: 1px solid #eaeaea
+    border-bottom: 1px solid #eaeaea
 
   &__product
     width: 35%
+    height: 115px
     text-align: left
     padding-left: 120px
 
@@ -1117,6 +1121,8 @@ i.fas.fa-long-arrow-alt-right
 
 .checkout
   margin-top: 30px
+  &_first
+    margin-top: 70px
 
 
 
@@ -1259,3 +1265,381 @@ i.fas.fa-long-arrow-alt-right
 
   &:focus + label:before
     box-shadow: 0 0 0 1px rgba(0,0,0,.5)
+
+
+/*  PRODUCT SHOP PAGE BLOCK   */
+
+
+
+.shop
+  display: flex
+  justify-content: space-between
+  margin: 60px 0 80px 0
+
+  &__details
+    margin-bottom: 20px
+    & .drop
+      display: flex
+      position: static
+      border: none
+      width: 150px
+
+  &__right
+    width: 850px
+
+  &__box
+    display: flex
+    justify-content: space-between
+
+  &__filters
+    display: flex
+    flex-wrap: wrap
+    width: 75%
+
+
+  &__filter
+    width: 263px
+    & h3
+      text-align: left
+      font-size: 14px
+      font-weight: bold
+      color: #6f6e6e
+      line-height: 20px
+      text-transform: uppercase
+      margin-bottom: 15px
+
+  &__form
+    width: 100%
+    line-height: 20px
+  &__form2
+    width: 100%
+    & label
+      padding-right: 50px
+
+  &__label
+    padding-right: 30px
+    font-size: 14px
+    color: #6f6e6e
+    text-transform: uppercase
+    &_cratches
+      padding-right: 25px !important
+    &_cratches2
+      padding-right: 44px !important
+
+
+  &__range
+    width: 100%
+
+  &__price
+    display: flex
+    justify-content: space-between
+    &_text
+      font-family: 'OpenSans'
+      font-size: 16px
+      color: #6f6e6e
+      line-height: 38px
+      font-weight: 400
+
+  &__products
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 50px
+
+  &__summary
+    padding: 5px 5px 5px 20px
+    width: 200px
+    border-bottom: 1px solid #ebebeb
+    border-left: 5px solid #ef5b70
+
+
+  &__underfilters
+    display: flex
+    margin-top: 40px
+    padding: 10px
+    background-color: #f3f3f3
+
+  &__item
+    display: flex
+    margin-right: 10px
+    &_h4
+      font-size: 14px
+      color: #6f6e6e
+      line-height: 26px
+      padding: 0 10px
+      background-color: #ffffff
+      border: 1px solid #ebebeb
+      font-weight: 400
+    &_input
+      width: 65px
+      padding-left: 10px
+      font-size: 14px
+      color: #6f6e6e
+      line-height: 26px
+      background-color: #ffffff
+      border: 1px solid #ebebeb
+      &-2
+        width: 50px
+
+  &__underproducts
+    display: flex
+    justify-content: space-between
+    &_left
+      background-color: #ffffff
+      border: 1px solid #ebebeb
+      border-radius: 3px
+
+  &__link
+    padding: 5px 10px
+    & i
+      font-size: 13px
+
+  &__pages
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_h5
+      font-size: 16px
+      font-weight: 400
+      color: #c4c4c4
+      line-height: 26px
+      transition: all 0.6s
+      &:hover
+        color: $siteColor
+        transform: scale(1.1)
+
+
+  &__viewall
+    padding: 10px 45px
+    font-size: 16px
+    font-weight: 400
+    color: #ef5b70
+    line-height: 26px
+    background-color: #ffffff
+    border: 1px solid #ef5b70
+    border-radius: 3px
+
+  &__choosed
+    color: $siteColor
+
+.filter
+  font-size: 14px
+  font-weight: 500
+  color: #6f6e6e
+  line-height: 26px
+  & span
+    padding: 0 10px
+    font-size: 14px
+    color: #dfdfdf
+    line-height: 26px
+
+
+
+
+.product__offer
+  background-image: url("../img/black.png")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  height: 350px
+  &_title
+    font-size: 20px
+    font-weight: bold
+    color: #fbfbfb
+    text-align: center
+    letter-spacing: 0.03em
+    -webkit-transform: scale(1)
+    -ms-transform: scale(1)
+    transform: scale(1)
+    margin-bottom: 10px
+    margin-top: 20px
+  &_text
+    font-size: 14px
+    font-weight: 300
+    color: #fbfbfb
+    text-align: center
+    letter-spacing: 0.03em
+    line-height: 24px
+    -webkit-transform: scale(1)
+    -ms-transform: scale(1)
+    transform: scale(1)
+
+
+.product__box
+  display: flex
+  justify-content: space-between
+  align-items: center
+  color: #fff
+  &_img
+    position: absolute
+    left: 138px
+    top: 95px
+  &_item
+    text-align: center
+    padding-top: 130px
+    width: 320px
+    position: relative
+
+
+
+
+
+
+
+
+.checkbox 
+  position: absolute
+  z-index: -1
+  opacity: 0
+  margin: 10px 0 0 20px
+  & + label
+    position: relative
+    padding: 0 25px 0 20px
+    cursor: pointer
+
+  & + label:before
+    content: ""
+    position: absolute
+    top: 3px
+    left: 0px
+    width: 13px
+    height: 13px
+    background: #ebebeb
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2)
+    transition: 0.2s
+
+  & + label:after
+    content: ""
+    position: absolute
+    top: 5px
+    left: 2px
+    width: 9px
+    height: 9px
+    background: #fff
+    box-shadow: 0 2px 5px #dfdfdf
+    transition: 0.2s
+
+  &:checked + label:after
+    background-color: $siteColor
+
+
+input[type=range] 
+  -webkit-appearance: none /* Скрывает слайдер, чтобы можно было создать свой */
+  width: 100% /* Указание параметра ширины требуется для Firefox. */
+input[type=range]::-webkit-slider-thumb 
+  -webkit-appearance: none
+input[type=range]:focus 
+  outline: none /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+
+
+input[type=range]::-ms-track 
+  width: 100%
+  cursor: pointer
+  background: transparent /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  border-color: transparent
+  color: transparent
+
+
+input[type=range]
+  -webkit-appearance: none
+  margin: 0 0
+  width: 100%
+  &:focus
+    outline: none
+  &::-webkit-slider-runnable-track
+    width: 100%
+    height: 8px
+    cursor: pointer
+    animate: 0.2s
+    background: #f0f0f0
+    border-radius: 10px
+
+  &::-webkit-slider-thumb
+    height: 14px
+    width: 14px
+    border-radius: 50%
+    background: $siteColor
+    cursor: pointer
+    -webkit-appearance: none
+    margin-top: -3px
+
+
+  &::-moz-range-track
+    width: 100%
+    height: 8px
+    cursor: pointer
+    animate: 0.2s
+    background: #f0f0f0
+    border-radius: 10px
+
+  &::-moz-range-thumb
+    height: 14px
+    width: 14px
+    border-radius: 50%
+    background: $siteColor
+    cursor: pointer
+
+  &::-ms-track
+    width: 100%
+    height: 8px
+    cursor: pointer
+    animate: 0.2s
+    background: transparent
+    border-color: transparent
+    border-width: 16px 0
+    border-radius: 10px
+    color: transparent
+
+  &::-ms-fill-lower
+    background: $siteColor
+    border: 0.2px solid #010101
+    border-radius: 10px
+
+  &::-ms-fill-upper
+    background: $siteColor
+    border: 0.2px solid #010101
+    border-radius: 10px
+
+  &::-ms-thumb
+    height: 14px
+    width: 14px
+    border-radius: 50%
+    background: $siteColor
+    cursor: pointer
+
+  &:focus::-ms-fill-lower
+    background: $siteColor
+
+  &:focus::-ms-fill-upper
+    background: $siteColor
+
+
+summary
+  display: block
+
+summary::-webkit-details-marker
+  display: none
+
+summary::after
+  content: '\25B6'
+  padding-right: 0.5em
+  color: #838383
+  padding-left: 1em
+  font-size: 12px
+
+details[open] > summary::after
+  content: '\25BC'
+  color: #838383
+  font-size: 12px
+
+.shop__details summary::after
+  content: '\25B6'
+  padding-right: 0.5em
+  color: #838383
+  padding-left: 10em
+  font-size: 12px
+
+.shop__details details[open] > summary::after
+  content: '\25BC'
+  color: $siteColor
+  font-size: 12px
