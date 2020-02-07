@@ -1502,15 +1502,12 @@ input[type=range] {
   -webkit-appearance: none;
   width: 100%;
 }
-
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
-
 input[type=range]:focus {
   outline: none;
 }
-
 input[type=range]::-ms-track {
   width: 100%;
   cursor: pointer;
@@ -1597,11 +1594,9 @@ input[type=range]:focus::-ms-fill-upper {
 summary {
   display: block;
 }
-
 summary::-webkit-details-marker {
   display: none;
 }
-
 summary::after {
   content: "▶";
   padding-right: 0.5em;
