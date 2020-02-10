@@ -4,22 +4,36 @@
   margin: 0
 
 body
-  font-family: sans-serif
+  font-family: 'PT Sans', sans-serif
 
 a
   text-decoration: none
+
+.button
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  background-color: #008DCD
+  border-radius: 30px
+  padding: 16px 16px
+  color: #ffffff
+  font-weight: bold
+  font-size: 16px
+  line-height: 19px
+  text-transform: uppercase
+  max-width: 270px
 
 
 .top
   height: 50vh
   background: url("../img/firstpic.png")
-  background-position: center
   background-repeat: no-repeat
+  background-position: center
   background-size: cover
   display: flex
   flex-direction: column
-  padding-left: 24px
-  padding-right: 24px
+  padding-left: 20px
+  padding-right: 20px
 .header
   min-height: 80px
   display: flex
@@ -44,6 +58,28 @@ a
 
 .menu
   list-style: none
+  &__checkbox
+    &_label
+      font-size: 10px
+      color: #9E9E9E
+  &__input
+    padding: 16px 16px
+    width: 240px
+    border-radius: 30px
+    margin-top: 10px
+    text-align: left
+    margin-bottom: 10px
+    border: 1px solid #363636
+    font-size: 14px
+    color: #363636
+    &_label
+        font-weight: bold
+        font-size: 18px
+  &__form
+    padding: 0 20px
+    height: 25%
+    margin-top: 20px
+    margin-bottom: 10px
   &__link
     color: #000
     text-decoration: none
@@ -54,13 +90,288 @@ a
 .top__content_inside
   display: none
 
+.steps
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  max-width: 1042px
+  &__item
+    padding: 20px
+    width: 300px
+  &__h3
+    padding-top: 10px
+    font-size: 26px
+    line-height: 31px
+  &__text
+    font-size: 16px
+    line-height: 19px
+    padding-top: 10px
+
+.send
+  padding: 20px
+  background-color: #F7F7F7
+  &__button
+    margin-top: 10px
+
+
+.callback
+  background-color: #008DCD
+  padding: 20px
+  &__input
+    color: #ffffff!important
+    background-color: #008DCD
+    border: 1px solid #ffffff!important
+    &::-webkit-input-placeholder
+      color: #fff
+  &__button
+    background-color: #FFCC00
+    color: #000
+  &__h3
+    font-size: 28px
+    line-height: 34px
+    text-transform: uppercase
+    color: #fff
+    margin-bottom: 20px
+  &__text
+    font-size: 14px
+    line-height: 13px
+    color: #fff
+  &__form
+    padding: 0 !important
+    margin-top: 10px !important
+  &__label
+    color: #fff !important
+
+.reviews
+  &__container
+    display: flex
+    justify-content: space-around
+    padding: 20px
+  &__box
+    display: flex
+    flex-direction: column
+    max-width: 300px
+    margin-right: 10px
+    &:last-of-type
+      margin-right: 0
+  &__item
+    display: flex
+    justify-content: flex-start
+    margin-bottom: 10px
+
+  &__title
+    font-size: 28px
+    line-height: 34px
+    padding: 20px 20px 0 20px
+  &__name
+    font-size: 26px
+    line-height: 31px
+  &__supname
+    font-size: 18px
+    line-height: 22px
+  &__description
+    font-size: 10px
+    line-height: 12px
+    margin: 5px 0
+  &__img
+    padding-right: 15px
+
+  &__text
+    font-size: 12px
+    line-height: 14px
+
+
+  &__sliders
+    display: flex
+    align-items: center
+    font-size: 24px
+    color: #C4C4C4
+
+    &_1
+      margin-right: 15px
+    &_2
+      margin-left: 15px
+
+
+.advantages
+  background-color: #F7F7F7
+
+
+  &__container
+    background-color: #F7F7F7
+    display: flex
+    justify-content: center
+    padding-bottom: 20px
+
+  &__title
+    font-size: 28px
+    line-height: 34px
+    padding: 20px
+  &__box
+    display: flex
+    min-width: 300px
+    max-width: 400px
+    justify-content: center
+    flex-wrap: wrap
+
+  &__item
+    padding: 2vw
+    max-width: 90px
+
+
+.warranty
+  padding: 20px 20px 40px 20px
+  &__container
+    display: flex
+    justify-content: center
+
+  &__title
+    margin-bottom: 30px
+    padding: 20px
+  &__box
+    max-width: 400px
+
+
+  &__img
+    width: 48px
+    margin-right: 20px
+  &__h3
+    font-size: 16px
+    line-height: 19px
+  &__text
+    font-size: 12px
+    line-height: 14px
+  &__top
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 30px
+  &__button
+    margin-top: 10px
+  &__bottom
+    padding-left: 5vw
+    max-width: 310px
+
+  &__slider1
+    padding-right: 3vw
+  &__slider2
+    padding-left: 3vw
+
+
+.quastions
+  padding: 24px
+  background-color: #D2ECF7
+  &__details
+  &__summary
+    padding: 15px 30px 15px 15px
+    background-color: #ffffff
+    border-radius: 32px
+    outline: none
+    margin-bottom: 10px
+    position: relative
+  &__p
+    padding: 10px 5px 15px 20px
+    margin-left: 15px
+    background-color: #FFCC00
+    border-radius: 32px
+    color: #ffffff
+    margin-bottom: 20px
+
+
+.brands
+  padding: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  position: relative
+  &__item
+    padding: 0 15px
+  &__slider
+    position: absolute
+    top: 40%
+    &_1
+      left: 2%
+    &_2
+      right: 2%
+
+.footer
+  background-color: #E9E9E9
+  padding-top: 10px
+  &__form
+    border-bottom: 1px solid #C4C4C4
+    padding: 0 0 20px 0 !important
+    margin: 0 20px
+  &__bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 20px
+    padding: 20px 0
+    border-bottom: 1px solid #C4C4C4
+  &__open
+    color: #363636
+
+  &__last
+    padding: 10px
+    display: flex
+    justify-content: center
+
+
+  &__text
+    font-size: 10px
+    line-height: 12px
+    padding: 0 2vw
+
+
+
+
+summary
+  display: block
+
+
+summary::-webkit-details-marker
+  display: none
+
+
+summary::after
+  content: '\25B6'
+  position: absolute
+  right: 5%
+  top: 35%
+
+
+details[open] > summary::after
+  content: '\25BC'
+  position: absolute
+  right: 5%
+  top: 35%
+
+
+
+
+
+.understeps
+  background-color: #F7F7F7
+  padding: 20px
+  &__button
+    margin-top: 20px
+  &__h2
+    font-size: 18px
+    line-height: 22px
+    margin-bottom: 10px
+  &__p
+    font-size: 12px
+    line-height: 14px
+    color: #000
+  &__img
+    width: 100%
 
 
 
 
 @media (max-width: 767px)
   .menu
-    height: 45%
     display: flex
     flex-direction: column
     align-items: flex-start
@@ -68,54 +379,25 @@ a
     &__icons
       display: flex
       justify-content: space-between
-      align-items: flex-end
-    &__form
-      padding: 0 24px
-      height: 25%
-      margin-top: 20px
-      margin-bottom: 10px
+
     &__button
-      height: 40px
-      width: 100%
-      font-size: 16px
-      color: #ffffff
-      font-weight: 700
-      text-transform: uppercase
       margin-bottom: 10px
-    &__checkbox
-      &_label
-        font-size: 10px
-        color: #9E9E9E
-    &__input
-      height: 40px
-      width: 100%
-      border-radius: 20px
-      margin-top: 10px
-      text-align: center
-      margin-bottom: 10px
-      border: 1px solid #363636
-      font-size: 14px
-      color: #363636
-      &_label
-        font-weight: bold
-        font-size: 18px
     &__icon
       padding: 20px
   .top__content_outside
-    padding: 0 16px
+    padding: 0 20px
   .top__content_h3
-    font-size: 32px
+    font-size: 36px
     text-transform: uppercase
     text-align: left
-    font-weight: 700
+    line-height: 38px
+    font-weight: bold
     margin-top: 10px
   .top__content_p
-    font-size: 24px
+    font-size: 26px
     font-weight: bold
     margin-top: 8px
   .top__content_button
-    height: 48px
-    width: 280px
     margin-top: 20px
 
   .nav
@@ -126,17 +408,48 @@ a
     width: 100%
     height: 100vh
     background: #fff
-    &__logo
-      padding: 16px 16px 16px 24px
+    &_footer
 
-.button
-  display: flex
-  justify-content: center
-  align-items: center
-  background-color: #008DCD
-  border-radius: 20px
-  color: #ffffff
-  font-weight: bold
+    &__logo
+      padding: 24px 16px 16px 24px
+
+  .understeps
+    &__container
+      background-color: #F7F7F7
+      padding: 20px
+    &__button
+      margin-top: 20px
+    &__h2
+      font-size: 18px
+      line-height: 22px
+    &__p
+      font-size: 12px
+      line-height: 14px
+      color: #000
+    &__item
+      &_right
+        display: none
+
+  .brands__item_additional
+    display: none
+
+
+
+  .warranty
+    &__img
+      &_outside
+        display: none
+    &__box
+      &_second
+        display: none
+      &_third
+        display: none
+
+  .reviews__box
+    margin-right: 0
+  .reviews__box_2
+    display: none
+
 
 
 @import "m768"
