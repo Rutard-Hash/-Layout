@@ -15,6 +15,7 @@ let basket = {
 
     add(product) {
       this.addProductToBasket(product);
+
       console.log(this.calculateSum());
     },
 

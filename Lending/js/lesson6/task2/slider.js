@@ -87,9 +87,7 @@ let images = {
 
     /** Переключиться на предыдущее изображение. */
     setNextLeftImage() {
-        this.slides[this.currentIdx].classList.add('left');
         this.hideVisibleImages();
-        this.slides[this.currentIdx].classList.remove('left');
         if (this.currentIdx == 0) {
             this.currentIdx = this.slides.length - 1;
         } else {
@@ -102,13 +100,20 @@ let images = {
     /** Переключиться на следующее изображение. */
     setNextRightImage() {
         this.slides[this.currentIdx].classList.add('right');
+        setTimeout(() => {
+            this.slides[this.currentIdx].classList.remove('right');
+        }, 800);
         this.hideVisibleImages();
-        this.slides[this.currentIdx].classList.remove('right');
-        if (this.currentIdx == this.slides.length - 1) {
-            this.currentIdx = 0;
-        } else {
-            this.currentIdx++;
-        }
-        this.showImageWithCurrentIdx();
+            if (this.currentIdx == this.slides.length - 1) {
+                this.currentIdx = 0;
+            } else {
+                this.currentIdx++;
+            }
+        this.slides[this.currentIdx].classList.remove('right-reverse');
+            this.showImageWithCurrentIdx();
+            setTimeout(() => {
+                this.slides[this.currentIdx].classList.remove('right');
+            }, 200);
+
     },
 }
