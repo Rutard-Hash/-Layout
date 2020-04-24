@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product__name {
+  padding: 0 120px;
+}
+
+.basket-item_name {
+  padding: 0 10px;
+}
+
+.basket-item_price {
+  padding: 0 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

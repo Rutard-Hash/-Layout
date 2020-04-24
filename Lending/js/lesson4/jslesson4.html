@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/afdc7aa636.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        'use strict';
+
+        //Задача 1
+        function isInteger(number) {
+            return (number ^ 0) === number;
+        }
+        function calculateNumericUnits(number) {
+            if ((number < 0 && number > 999) || isNaN(number) || !(isInteger(number))) {
+                alert("Вы ввели не корректные данные ")
+                let obj = {
+
+                };
+                console.log(obj);
+            } else {
+                number = String(number);
+                let units = number.charAt(number.length - 1);
+                let tens = number.charAt(number.length - 2);
+                let hundreds = number.charAt(number.length - 3);
+
+                class Calc {
+                    constructor(units, tens, hundreds) {
+                        this.units = units;
+                        this.tens = tens;
+                        this.hundreds = hundreds;
+                    }
+                }
+
+                const expandedNumber = new Calc(units, tens, hundreds);
+                console.log(expandedNumber);
+            }
+        }
+        calculateNumericUnits("Привет");
+    </script>
+</body>
+</html>

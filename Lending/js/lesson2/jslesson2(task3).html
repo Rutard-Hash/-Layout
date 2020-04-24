@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Задача 3
+        'use strict';
+
+        let a = 10;
+        let b = -3;
+
+        if (a >= 0 && b >= 0) {
+            alert(a - b);
+        }
+
+        if (a < 0 && b < 0) {
+            alert(a * b);
+        }
+
+        if ((Math.sign(a) >= 0) && (Math.sign(b) < 0) || (Math.sign(a) < 0) && (Math.sign(b) >= 0)) {
+            alert(a + b);
+        }
+
+        //Задача 4
+        function sum(x, y) {
+            return x + y;            
+        }
+        function subtract(x, y) {
+            return x - y;
+        }
+        function multiply(x, y) {
+            return x * y;
+        }
+        function divide(x, y) {
+            return x / y;
+        }
+
+        //Задача 5
+        function mathOperation(x, y, operation) {
+            switch (operation) {
+                case sum:
+                    alert(sum(x, y));
+                    break;
+                case subtract:
+                    alert(subtract(x, y));
+                    break;
+                case multiply:
+                    alert(multiply(x, y));
+                    break;
+                case divide:
+                    alert(divide(x, y));
+                    break;
+            }
+        }
+        mathOperation(2, 5, divide);
+
+        //Задача 6
+
+        function calculateCase() {
+
+            let rub = Number(prompt("Введи количество рублей"));
+            let rubStr = String(rub);
+            let lastChar = Number(rubStr.charAt(rubStr.length - 1));
+            let preLastChar = Number(rubStr.charAt(rubStr.length - 2));
+
+            let ending = null;
+            if (lastChar > 0 && lastChar === 1 ) {
+                ending = "ль";
+            }
+            if (lastChar >= 2 && lastChar <= 4) {
+                ending = "ля";
+            }
+            if ((lastChar >= 5 && lastChar <= 10) || (lastChar === 0) || (lastChar === 1 && preLastChar === 1)) {
+                ending = "лей"
+            }
+            alert("Ваша сумма в " + rub + " руб" + ending + " успешно зачислена");
+        }
+        calculateCase();
+    </script>
+</body>
+</html>
