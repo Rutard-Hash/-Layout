@@ -36,8 +36,58 @@
 			</form>
 		</div>
 		<div class="header__right">
-			<a href="Shoping-cart.html"><img class="header__cart" src="img/cart.png" alt="cart"></a>
+			<button class="cart__button"><img class="header__cart" src="img/cart.png" alt="cart"></button>
 			<a class="button" href="checkout.html">My account</a>
+			<div class="drop header__basket">
+				<div class="drop__flex">
+					<div id="basket">
+						<div class="basket__item">
+							<div class="basket__item_img"><img src="./img/1821.png" alt="basket-item-img"></div>
+							<div class="basket__item_desc">
+								<h4 class="basket__item_name">Rebox Zane</h4>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star-half-alt"></i>
+								<div class="calc">
+									<h5 class="amount"> 1 x</h5>
+									<h5 class="price">&nbsp;&#36; 250</h5>
+								</div>
+							</div>
+							<button class="basket__item_icon" id="remove">
+								<i class="fas fa-times-circle"></i>
+							</button>
+						</div>
+						<div class="basket__item">
+							<div class="basket__item_img"><img src="./img/1821.png" alt="basket-item-img"></div>
+							<div class="basket__item_desc">
+								<h4 class="basket__item_name">Rebox Zane</h4>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star-half-alt"></i>
+								<div class="calc">
+									<h5 class="amount"> 1 x</h5>
+									<h5 class="price">&nbsp;&#36; 250</h5>
+								</div>
+							</div>
+							<button class="basket__item_icon" id="remove">
+								<i class="fas fa-times-circle"></i>
+							</button>
+						</div>
+					</div>
+					<div class="basket__under">
+						<div class="basket__under_total">
+							<h3 class="total__text">TOTAL</h3>
+							<h3 class="total__price">&#36;500.00</h3>
+						</div>
+						<button class="basket__button_first">checkout</button>
+						<button class="basket__button_second">go to cart</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </header>
@@ -249,76 +299,21 @@
 		<p class="subtitle">Shop for items based on what we featured in this week</p>
 	</section>>
 
-	<section class="product center">
-		<div class="product__item">
-			<a href="single page.html"><img class="product__image" src="img/shop1.png"></a>
-			<div class="product__description">
-				<a class="product__name" href="single page.html">Mango People T-shirt</a>
-				<div class="product__price">&#36; 52</div>
+	<section class="center">
+		<div  class="product" id="catalog">
+			<div class="product__item">
+				<a href="single page.html"><img class="product__image" src="img/shop1.png"></a>
+				<div class="product__description">
+					<a class="product__name" href="single page.html">Mango People T-shirt</a>
+					<div class="product__price">&#36; 52</div>
+				</div>
+				<a class="product__add" href="#">Add to Cart</a>
 			</div>
-			<a class="product__add" href="#">Add to Cart</a>
 		</div>
-		<div class="product__item">
-			<a href="single page.html"><img class="product__image" src="img/shop2.png"></a>
-			<div class="product__description">
-				<a class="product__name" href="single page.html">Mango People T-shirt</a>
-				<div class="product__price">&#36; 52</div>
-			</div>
-			<a class="product__add" href="#">Add to Cart</a>
-		</div>
-		<div class="product__item">
-			<a href="single page.html"><img class="product__image" src="img/shop3.png"></a>
-			<div class="product__description">
-				<a class="product__name" href="single page.html">Mango People T-shirt</a>
-				<div class="product__price">&#36; 52</div>
-			</div>
-			<a class="product__add" href="#">Add to Cart</a>
-		</div>
-		<div class="product__item">
-			<a href="single page.html"><img class="product__image" src="img/shop4.png"></a>
-			<div class="product__description">
-				<a class="product__name" href="single page.html">Mango People T-shirt</a>
-				<div class="product__price">&#36; 52</div>
-			</div>
-			<a class="product__add" href="#">Add to Cart</a>
-		</div>
-		<div class="product__item">
-			<a href="single page.html"><img class="product__image" src="img/shop11.png"></a>
-			<div class="product__description">
-				<a class="product__name" href="single page.html">Mango People T-shirt</a>
-				<div class="product__price">&#36; 52</div>
-			</div>
-			<a class="product__add" href="#">Add to Cart</a>
-		</div>
-		<div class="product__item">
-			<a href="single page.html"><img class="product__image" src="img/shop22.png"></a>
-			<div class="product__description">
-				<a class="product__name" href="single page.html">Mango People T-shirt</a>
-				<div class="product__price">&#36; 52</div>
-			</div>
-			<a class="product__add" href="#">Add to Cart</a>
-		</div>
-		<div class="product__item">
-			<a href="single page.html"><img class="product__image" src="img/shop33.png"></a>
-			<div class="product__description">
-				<a class="product__name" href="single page.html">Mango People T-shirt</a>
-				<div class="product__price">&#36; 52</div>
-			</div>
-			<a class="product__add" href="#">Add to Cart</a>
-		</div>
-		<div class="product__item">
-			<a href="single page.html"><img class="product__image" src="img/shop44.png"></a>
-			<div class="product__description">
-				<a class="product__name" href="single page.html">Mango People T-shirt</a>
-				<div class="product__price">&#36; 52</div>
-			</div>
-			<a class="product__add" href="#">Add to Cart</a>
-		</div>
-	</section>
 		<div class="shop__button center">
 			<a class="button" href="#">Browse All Product<i class="fas fa-long-arrow-alt-right"></i></a>
 		</div>
-
+	</section>
 
 
 	<section class="offer center">

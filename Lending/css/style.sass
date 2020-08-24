@@ -193,13 +193,20 @@ a
     display: flex
 
   &__right
+    position: relative
     display: flex
     align-items: center
+    padding: 20px
+    &:hover .drop
+      display: flex
+      border-top: none
 
   &__cart
     margin-right: 26px
     display: flex
-
+  &__basket
+    position: absolute
+  
 
 
 .button
@@ -212,7 +219,69 @@ a
   text-align: center
 
 
+/* BASKET */
+
+.basket__item
+  display: flex
+  align-items: center
+  padding: 20px 0
+  justify-content: space-between
+  border-bottom: 1px solid rgba(237, 237, 237, 0.75)
+  &_desc
+    line-height: 28px
+    padding-bottom: 10px
+    & .fa-star 
+      color: rgba(228, 175, 72, 1)
+    & .fa-star-half-alt 
+      color: rgba(228, 175, 72, 1)
+  &_icon
+    outline: none
+    border-right: none !important
+    & .fa-times-circle
+      font-size: 15px
+    
+  &_name 
+    font-size: 15px
+    font-weight: 900
+    text-transform: uppercase
+.basket__under
+  display: flex
+  flex-direction: column
+  &_total
+    display: flex
+    justify-content: space-between
+    padding: 20px 0
+  & button 
+      padding: 20px  !important
+      border: 1px solid rgba(241, 109, 127, 1) 
+      outline: none
+      font-size: 14px
+      font-weight: bold
+      color: rgba(241, 109, 127, 1)
+      text-transform: uppercase
+      height: 60px
+
+.calc
+  display: flex
+  color: rgba(241, 109, 127, 1)
+  & .amount 
+    font-size: 13px
+  & .price
+    font-size: 15px
+
+.basket__button_first
+  margin-bottom: 10px
+.basket__button_second
+  border: 1px solid rgba(237, 237, 237, 0.75) !important
+  color: rgba(74, 74, 74, 1) !important
+
+  
+
+
+
+
 /*  DROP FLEX BOX  */
+
 
 .drop
   background-color: #fff
@@ -221,7 +290,7 @@ a
   border: 1px solid #ececec
   display: none
   position:  absolute
-  top: 43px
+  top: 55px
   z-index: 2
 
   &__last
@@ -1644,3 +1713,6 @@ details[open] > summary::after
   content: '\25BC'
   color: $siteColor
   font-size: 12px
+
+.cart__button
+  outline: none

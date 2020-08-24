@@ -9,7 +9,8 @@
 
 .modal {
   border: 1px solid #000;
-  box-shadow: 10px 5px 5px red;
+  -webkit-box-shadow: 10px 5px 5px red;
+          box-shadow: 10px 5px 5px red;
   margin-top: 100px;
   padding: 25px;
   position: relative;
@@ -30,5 +31,4 @@ span {
   top: 10px;
   font-size: 20px;
 }
-
 /*# sourceMappingURL=style.css.map */
